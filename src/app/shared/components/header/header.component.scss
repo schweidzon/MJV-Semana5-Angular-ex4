@@ -1,0 +1,21 @@
+.header {
+    background-color: rgb(162, 162, 199);
+    padding: 20px;
+    color: blue;
+    border: 1px solid black;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.options ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    justify-content: center;
+    align-self: center;
+    align-content: center;
+}

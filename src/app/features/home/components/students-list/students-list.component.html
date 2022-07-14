@@ -1,0 +1,26 @@
+<div class="imgcontainer">
+    <img src="https://s3-sa-east-1.amazonaws.com/prod-jobsite-files.kenoby.com/uploads/mjv-1585819697-kenoby-thumbnail-250x250png.png" alt="Avatar" class="avatar" >
+  </div>
+<div class="conteiner" *ngFor="let student of students">
+    
+    <table class="borderd striped centered">
+        <thead class="table">
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Data da matrícula</th>
+                <th>Data do último pagamento</th>
+                <th>Mensalidade</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{student.id}}</td>
+                <td>{{student.name}}</td>
+                <td>{{student.dataInclusaoSistema| date}}</td>                
+                <td>{{student.dataUltimoPgto | date}}</td>                
+                <td>{{student.valorMensalidade | currency : 'R$'}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
