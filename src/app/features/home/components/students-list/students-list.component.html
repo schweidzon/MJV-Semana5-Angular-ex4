@@ -6,20 +6,22 @@
     <table class="borderd striped centered">
         <thead class="table">
             <tr>
-                <th>ID</th>
+                <!-- <th>ID</th> -->
                 <th>Nome</th>
-                <th>Data da matrícula</th>
-                <th>Data do último pagamento</th>
+               <!-- <th>Data da matrícula</th>  --> 
+                <!-- <th>Data do último pagamento</th> --> 
                 <th>Mensalidade</th>
+                <th>Detalhes</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td>{{student.id}}</td>
-                <td>{{student.name}}</td>
-                <td>{{student.dataInclusaoSistema| date}}</td>                
-                <td>{{student.dataUltimoPgto | date}}</td>                
+               <!-- <td>{{student.id}}</td> -->
+               <td>{{student.name}}</td>
+               <!--  <td>{{student.dataInclusaoSistema | date}}</td>    -->      
+               <!--  <td>{{student.dataUltimoPgto | date}}</td>   -->             
                 <td>{{student.valorMensalidade | currency : 'R$'}}</td>
+                <td><button class="details" (click)="studentsDetails(student.id)">Detalhes</button></td>
             </tr>
         </tbody>
     </table>

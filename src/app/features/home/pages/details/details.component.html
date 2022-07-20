@@ -1,0 +1,28 @@
+<div *ngIf="student">
+    <div class="conteiner">
+    <app-header></app-header>
+        <table class="borderd striped centered">
+            <thead class="table">
+                <tr>
+                     <th>ID</th> 
+                    <th>Nome</th>
+                    <th>Data da matrícula</th>  
+                    <th>Data do último pagamento</th> 
+                    <th>Mensalidade</th>
+                   
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{student.id}}</td>
+                    <td>{{student.name}}</td>
+                    <td>{{student.dataInclusaoSistema | date}}</td>       
+                    <td>{{student.dataUltimoPgto | date}}</td>             
+                    <td>{{student.valorMensalidade | currency : 'R$'}}</td>
+                   
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<app-footer></app-footer>

@@ -2,9 +2,10 @@
     <h1>MJV Academy</h1>   
     <div class="options">
         <ul>
-            <li (click)="navigatebyUrl('home')">Home</li>
-            <li (click)="navigatebyUrl('login')">Login</li>
-            <li (click)="navigatebyUrl('cadastro')">Cadastro</li>
+            <li (click)="navigatebyUrl('login')" *ngIf="!user">Login</li>
+            <li (click)="navigatebyUrl('home')" *ngIf="user">Lista de Alunos</li>
+            <li (click)="navigatebyUrl('cadastro')" *ngIf="!user">Cadastro</li>
+            <li *ngIf="user" (click)="exit()"> Sair</li>
         </ul>
     </div> 
 </div>
